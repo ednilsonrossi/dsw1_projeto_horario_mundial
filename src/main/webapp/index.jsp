@@ -28,7 +28,8 @@
 <body>
 	<form action="index.jsp">
 		<select name="select_locale">
-			<option selected="selected" value="">Selecione um fuso horário</option>
+			<option selected="selected" value="">Selecione um fuso
+				horário</option>
 			<%-- Esse bloco de código, assim como os abaixos, são parte do código do método jspService(), inclusive este comentários --%>
 			<%
 			for (var zone : getZoneIds()) {
@@ -44,11 +45,15 @@
 	var zone = request.getParameter("select_locale");
 	if (zone.isEmpty()) {
 	%>
-	<p> Horário sp: <%=getZoneDateTime(null).toString()%></p>
+	<p>
+		Horário sp:
+		<%=getZoneDateTime(null).toString()%></p>
 	<%
 	} else {
 	%>
-	<p> Horário: <%=getZoneDateTime(zone).toString()%></p>
+	<p>
+		Horário:
+		<%=getZoneDateTime(zone).toString()%></p>
 	<%
 	}
 	%>
